@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:id="@+id/profileSection">
+        android:id="@+id/profileSection"
+        android:layout_marginTop="15dp">
 
         <EditText
             android:id="@+id/editTextTextPersonName"
@@ -23,11 +24,11 @@
             android:inputType="textPersonName"
             android:text="Name" />
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imageView"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_weight="1"
+            android:layout_width="75dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="30dp"
             tools:src="@tools:sample/avatars" />
 
     </LinearLayout>
@@ -35,16 +36,52 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:id="@+id/sendReceive1"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/profileSection"
+        android:layout_marginTop="25dp">
+
+        <ImageButton
+            android:background="#151817"
+            android:id="@+id/payButton"
+            android:layout_width="155dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/pay"
+           android:layout_margin="25dp"
+           />
+
+        <ImageButton
+            android:background="#151817"
+            android:id="@+id/reqButton"
+            android:layout_width="155dp"
+            android:layout_height="75dp"
+            android:layout_marginRight="25dp"
+            android:src="@drawable/request"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            />
+
+
+
+        
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/sendReceive2"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/sendReceive1"
         android:layout_marginTop="25dp">
 
         <Button
             android:layout_width="155dp"
             android:layout_height="45dp"
             android:layout_marginLeft="25dp"
-            android:text="Pay"
+            android:text="Scan"
             android:drawableLeft="@drawable/ic_home_black_24dp"
             android:textAllCaps="false"
             android:textColor="@color/black"/>
@@ -53,26 +90,70 @@
             android:layout_height="45dp"
             android:layout_marginLeft="25dp"
             android:drawableLeft="@drawable/ic_home_black_24dp"
-            android:text="Request"
+            android:text="QR Code"
             android:textAllCaps="false"
             android:textColor="@color/black"
 
             />
 
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/sendReceive2">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple_500"
+            android:text="Send again"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="24dp"
+            />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginLeft="5dp"
+        tools:listitem="@layout/item_user_contact"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple_500"
+            android:text="Request again"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="24dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginLeft="5dp"
+            tools:listitem="@layout/item_user_contact">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="30dp"
+            android:text="Show Recent Activity" />
+
+
     </LinearLayout>
 
 
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </RelativeLayout>
