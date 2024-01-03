@@ -49,7 +49,9 @@
             android:layout_height="75dp"
             android:layout_marginLeft="25dp"
             android:src="@drawable/pay"
+            android:layout_marginBottom="20dp"
            android:layout_margin="25dp"
+
            />
 
         <ImageButton
@@ -60,7 +62,7 @@
             android:layout_marginRight="25dp"
             android:src="@drawable/request"
             android:layout_marginTop="25dp"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="20dp"
             />
 
 
@@ -75,16 +77,17 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/sendReceive1"
-        android:layout_marginTop="25dp">
+        >
 
-        <Button
+        <ImageButton
+            android:background="#151817"
+            android:id="@+id/scanButton"
             android:layout_width="155dp"
-            android:layout_height="45dp"
+            android:layout_height="75dp"
             android:layout_marginLeft="25dp"
-            android:text="Scan"
-            android:drawableLeft="@drawable/ic_home_black_24dp"
-            android:textAllCaps="false"
-            android:textColor="@color/black"/>
+            android:src="@drawable/scanBtn"
+
+            />
         <Button
             android:layout_width="155dp"
             android:layout_height="45dp"

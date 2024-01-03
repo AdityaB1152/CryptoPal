@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.dpaypal">
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false"/>
 
     <application
         android:allowBackup="true"
@@ -13,6 +18,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DPayPal"
         tools:targetApi="31">
+
+        <activity
+            android:name=".ScanActivity"
+            android:exported="false" />
         <activity
             android:name=".History"
             android:exported="false"
